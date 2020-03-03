@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() => runApp(MaterialApp(
   home: Home(),
@@ -22,9 +23,23 @@ class Home extends StatelessWidget {
 //        color: Colors.grey[400],
 //        child: Text('Hello'),
 //      ),
-      body: Padding(
-        padding: EdgeInsets.all(90.0),
-        child: Text('heloo'),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround, // same as flex box
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('Hello World'),
+          FlatButton(
+            onPressed: () {},
+            color: Colors.amber,
+            child: Text('Click me'),
+          ),
+          Container(
+            color: Colors.cyan,
+            padding: EdgeInsets.all(30.0),
+            child: Text('Inside container'),
+
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed:() {} ,
