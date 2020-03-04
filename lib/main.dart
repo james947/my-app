@@ -15,39 +15,38 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600] ,
       ),
-//      body: Container(
-////        padding: EdgeInsets.all(20.0),
-////        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
-//        padding: EdgeInsets.fromLTRB(10.0, 10.0, 30.0, 40.0),
-//        margin: EdgeInsets.all(30.0),
-//        color: Colors.grey[400],
-//        child: Text('Hello'),
-//      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Row(
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.all(10.0),
-            color: Colors.red,
-            child: Text('one'),
+          Expanded(
+            flex: 3,
+              child: Image.asset('assets/space.jpg')
           ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.orange,
-            child: Text('one'),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child: Text('One'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(30.0),
-            color: Colors.yellow,
-            child: Text('one'),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.pinkAccent,
+              child: Text('One'),
+            ),
           ),
-          Container(
-            padding: EdgeInsets.all(40.0),
-            color: Colors.green,
-            child: Text('one'),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.amber,
+              child: Text('One'),
+            ),
           ),
         ],
+
       ),
       floatingActionButton: FloatingActionButton(
         onPressed:() {} ,
